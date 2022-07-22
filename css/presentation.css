@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #230444;
+    --primary-light: #3c3799;
+    --secondary: #ED8240;
+    --tertiary: #92140C;
+    --quaternary: #D2EBE9;
+    --grey: #a9afb7;
+    --grey-dark: #353238;
+    --fluid-width: 90vw;
+    --max-width: 1170px;
+    --transition: 0.3s ease-in-out all;
+    --line-h: 1.5rem;
+    --line-H: 2rem;
+
+}
+
+body {
+    background-color: var(--quaternary);
+    color: var(--primary);
+    letter-spacing: 0.1rem;
+    line-height: var(--line-h);
+}
+
+.center {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+header {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.divH1 {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 250px;
+}
+
+span {
+    color: var(--primary-light);
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+article {
+    margin: 25px 0;
+    text-align: justify;
+}
+
+#salutation {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--quaternary);
+    text-decoration: none;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    border: transparent;
+    padding: 0.5rem 0.8rem;
+    text-transform: capitalize;
+    letter-spacing: var(--letter-spacing1);
+    transition: all 0.7s ease-in-out;
+    background-color: var(--tertiary);
+}
+
+.btn:hover {
+    background-color: var(--grey-dark);
+}
+
+@media screen and (max-width: 992px) {
+    .center {
+        max-width: 670px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        padding: 3rem;
+    }
+
+    .center {
+        font-size: 1.5rem;
+        max-width: 950px;
+        line-height: var(--line-H);
+    }
+
+    .divH1 {
+        width: 350px;
+    }
+
+    .article2 {
+        font-size: 1.4rem;
+    }
+
+    span {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.7rem;
+    }
+
+    #salutation {
+        font-size: 1.7rem;
+    }
+}

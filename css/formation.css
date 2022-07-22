@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-light: #3c3799;
+    --primary: #230444;
+    --secondary: #ED8240;
+    --tertiary: #92140C;
+    --quaternary: #D2EBE9;
+    --grey: #a9afb7;
+    --grey-dark: #353238;
+    --fluid-width: 90vw;
+    --max-width: 1170px;
+    --transition: 0.3s ease-in-out all;
+    --letter-spacing2: 0.2rem;
+    --letter-spacing1: 0.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: snow;
+    letter-spacing: var(--letter-spacing2);
+    font-weight: bold;
+}
+
+body {
+    background-color: var(--tertiary);
+    color: white;
+    letter-spacing: var(--letter-spacing1);
+}
+
+.grid {
+    width: var(--fluid-width);
+    margin: 1em auto;
+    min-width: var(--fluid-width);
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2rem;
+}
+
+h1 {
+    font-size: 3.2rem;
+    text-align: center;
+    margin: 0.3em auto;
+    font-family: monospace, serif, sans-serif;
+    letter-spacing: var(--letter-spacing2);
+}
+
+.afci,
+.nurserie,
+.skilleos,
+.caces,
+.alarme {
+    padding: 0.7rem;
+    border-radius: 7px;
+    background-color: var(--grey-dark);
+    box-shadow: inset black 2px 2px 6px, inset -2px -2px 6px black;
+}
+
+.afci {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.espace {
+    width: 5px;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    border: 5px solid var(--grey);
+    border-top-color: var(--secondary);
+    border-radius: 50%;
+    animation: spinner 0.8s linear infinite;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 5px;
+    border: transparent;
+    padding: 0.5rem 0.4rem;
+    text-transform: capitalize;
+    transition: all 0.7s ease-in-out;
+    background-color: var(--primary);
+    letter-spacing: var(--letter-spacing1);
+}
+
+.btn:hover {
+    background-color: var(--grey-dark);
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 3em;
+    }
+
+    .grid {
+        margin: 3em auto;
+    }
+}
